@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MaxGest</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body onload="initializeDashboard()">
+    <div class="container">
+        <header class="dashboard-header">
+            <div class="user-profile">
+                <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+                <img id="profile-picture-img" src="/assets/img/default-avatar.png" alt="Foto de perfil" class="profile-picture">
+                <h1 id="welcome-message">Bienvenido</h1>
+            </div>
+            <a href="/logout" id="logout-button" class="btn">Cerrar Sesión</a>
+        </header>
+
+        <main>
+            <h2>Tus Herramientas</h2>
+            <nav>
+                <a href="pomodoro.html" class="card">
+                    <h3>Temporizador Pomodoro</h3>
+                    <p>Organiza tu tiempo de estudio y descanso.</p>
+                </a>
+                <a href="mapeo-mental.html" class="card">
+                    <h3>Mapeo Mental</h3>
+                    <p>Crea mapas mentales para organizar tus ideas.</p>
+                </a>
+                <a href="sistema-leitner.html" class="card">
+                    <h3>Sistema Leitner</h3>
+                    <p>Aprende y memoriza con el sistema de tarjetas de memoria.</p>
+                </a>
+            </nav>
+        </main>
+
+        <section class="reminder-section">
+            <h2>Mis Recordatorios</h2>
+            <p>Crea un recordatorio y añádelo a tu calendario nativo.</p>
+            <form id="reminder-form">
+                <div class="form-group">
+                    <label for="task-description">Descripción de la Tarea</label>
+                    <input type="text" id="task-description" name="task-description" placeholder="Ej: Preparar la presentación para el lunes" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-date">Fecha</label>
+                    <input type="date" id="task-date" name="task-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-time">Hora</label>
+                    <input type="time" id="task-time" name="task-time" required>
+                </div>
+                <button type="submit" class="btn">Generar Enlace de Calendario</button>
+            </form>
+            <div id="calendar-links" style="display:none; margin-top: 20px;">
+                <p>¡Casi listo! Haz clic en tu servicio de calendario preferido:</p>
+                <a id="google-calendar-link" href="#" target="_blank" class="calendar-link">Google Calendar</a>
+                <a id="outlook-calendar-link" href="#" target="_blank" class="calendar-link">Outlook</a>
+                <a id="yahoo-calendar-link" href="#" target="_blank" class="calendar-link">Yahoo Calendar</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
