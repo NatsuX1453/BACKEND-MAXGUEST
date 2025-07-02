@@ -1,0 +1,29 @@
+{
+	"name": "backend-maxguest",
+	"version": "1.0.0",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "node --watch app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/NatsuX1453/BACKEND-MAXGUEST.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/NatsuX1453/BACKEND-MAXGUEST/issues"
+	},
+	"homepage": "https://github.com/NatsuX1453/BACKEND-MAXGUEST#readme",
+	"description": "",
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^17.0.1",
+		"express": "^5.1.0",
+		"mysql2": "^3.14.1",
+		"sequelize": "^6.37.7"
+	}
+}
